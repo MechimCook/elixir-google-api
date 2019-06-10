@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :google_apis, key: :value
+#     config :cloud_storage_json_api, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:google_apis, :key)
+#     Application.get_env(:cloud_storage_json_api, :key)
 #
 # Or configure a 3rd-party app:
 #
@@ -28,13 +28,4 @@ use Mix.Config
 # here (which is why it is important to import them last).
 #
 #     import_config "#{Mix.env}.exs"
-
-config :google_apis,
-  spec_converter: GoogleApis.Converter.ApiSpecConverter,
-  client_generator: GoogleApis.Generator.SwaggerCli,
-  hex_api_key: System.get_env("HEX_API_KEY") || "invalidkey",
-  swagger_cli_image: "swaggerapi/swagger-codegen-cli:v2.3.1",
-  oauth_client: System.get_env("GOOGLE_CLIENT_ID"),
-  oauth_secret: System.get_env("GOOGLE_CLIENT_SECRET"),
-  template: System.get_env("TEMPLATE") || "gax",
-  tempdir: System.get_env("TEMPDIR")
+config :goth, json: {:system, "GCP_CREDENTIALS"}
