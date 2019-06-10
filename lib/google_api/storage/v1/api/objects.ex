@@ -46,7 +46,7 @@ defmodule GoogleApi.Storage.V1.Api.Objects do
     - :kmsKeyName (String.t): Resource name of the Cloud KMS key, of the form projects/my-project/locations/global/keyRings/my-kr/cryptoKeys/my-key, that will be used to encrypt the object. Overrides the object metadata&#39;s kms_key_name value, if any.
     - :provisionalUserProject (String.t): The project to be billed for this request if the target bucket is requester-pays bucket.
     - :userProject (String.t): The project to be billed for this request. Required for Requester Pays buckets.
-    - :body (ComposeRequest): 
+    - :body (ComposeRequest):
 
   ## Returns
 
@@ -124,7 +124,7 @@ defmodule GoogleApi.Storage.V1.Api.Objects do
     - :provisionalUserProject (String.t): The project to be billed for this request if the target bucket is requester-pays bucket.
     - :sourceGeneration (String.t): If present, selects a specific revision of the source object (as opposed to the latest version, the default).
     - :userProject (String.t): The project to be billed for this request. Required for Requester Pays buckets.
-    - :body (Object): 
+    - :body (Object):
 
   ## Returns
 
@@ -406,7 +406,7 @@ defmodule GoogleApi.Storage.V1.Api.Objects do
     - :projection (String.t): Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
     - :provisionalUserProject (String.t): The project to be billed for this request if the target bucket is requester-pays bucket.
     - :userProject (String.t): The project to be billed for this request. Required for Requester Pays buckets.
-    - :body (Object): 
+    - :body (Object):
 
   ## Returns
 
@@ -441,7 +441,7 @@ defmodule GoogleApi.Storage.V1.Api.Objects do
     request =
       Request.new()
       |> Request.method(:post)
-      |> Request.url("/storage/v1/b/{bucket}/o", %{
+      |> Request.url("/upload/storage/v1/b/{bucket}/o", %{
         "bucket" => URI.encode(bucket, &URI.char_unreserved?/1)
       })
       |> Request.add_optional_params(optional_params_config, optional_params)
@@ -478,7 +478,7 @@ defmodule GoogleApi.Storage.V1.Api.Objects do
     - :projection (String.t): Set of properties to return. Defaults to noAcl, unless the object resource specifies the acl property, when it defaults to full.
     - :provisionalUserProject (String.t): The project to be billed for this request if the target bucket is requester-pays bucket.
     - :userProject (String.t): The project to be billed for this request. Required for Requester Pays buckets.
-    - :body (Object): 
+    - :body (Object):
 
   ## Returns
 
@@ -709,7 +709,7 @@ defmodule GoogleApi.Storage.V1.Api.Objects do
     - :projection (String.t): Set of properties to return. Defaults to full.
     - :provisionalUserProject (String.t): The project to be billed for this request if the target bucket is requester-pays bucket.
     - :userProject (String.t): The project to be billed for this request, for Requester Pays buckets.
-    - :body (Object): 
+    - :body (Object):
 
   ## Returns
 
@@ -787,7 +787,7 @@ defmodule GoogleApi.Storage.V1.Api.Objects do
     - :rewriteToken (String.t): Include this field (from the previous rewrite response) on each rewrite request after the first one, until the rewrite response &#39;done&#39; flag is true. Calls that provide a rewriteToken can omit all other request fields, but if included those fields must match the values provided in the first rewrite request.
     - :sourceGeneration (String.t): If present, selects a specific revision of the source object (as opposed to the latest version, the default).
     - :userProject (String.t): The project to be billed for this request. Required for Requester Pays buckets.
-    - :body (Object): 
+    - :body (Object):
 
   ## Returns
 
@@ -876,7 +876,7 @@ defmodule GoogleApi.Storage.V1.Api.Objects do
     - :generation (String.t): If present, selects a specific revision of this object (as opposed to the latest version, the default).
     - :provisionalUserProject (String.t): The project to be billed for this request if the target bucket is requester-pays bucket.
     - :userProject (String.t): The project to be billed for this request. Required for Requester Pays buckets.
-    - :body (Policy): 
+    - :body (Policy):
 
   ## Returns
 
@@ -1016,7 +1016,7 @@ defmodule GoogleApi.Storage.V1.Api.Objects do
     - :projection (String.t): Set of properties to return. Defaults to full.
     - :provisionalUserProject (String.t): The project to be billed for this request if the target bucket is requester-pays bucket.
     - :userProject (String.t): The project to be billed for this request. Required for Requester Pays buckets.
-    - :body (Object): 
+    - :body (Object):
 
   ## Returns
 
@@ -1084,7 +1084,7 @@ defmodule GoogleApi.Storage.V1.Api.Objects do
     - :provisionalUserProject (String.t): The project to be billed for this request if the target bucket is requester-pays bucket.
     - :userProject (String.t): The project to be billed for this request. Required for Requester Pays buckets.
     - :versions (boolean()): If true, lists all versions of an object as distinct results. The default is false. For more information, see Object Versioning.
-    - :resource (Channel): 
+    - :resource (Channel):
 
   ## Returns
 
